@@ -7,7 +7,7 @@ export default function Layout() {
   const { rotation } = useNav();
   return (
     <section className="flex flex-col text-white w-screen h-screen flex-initial bg-back-color">
-      <div className="w-full h-16">
+      <div className="w-full h-16 md:flex hidden">
         <Navbar />
       </div>
 
@@ -60,6 +60,10 @@ export default function Layout() {
         <div className="w-full relative h-full z-50">
           <Outlet />
         </div>
+      </div>
+
+      <div className="w-full h-16 max-md:block hidden">
+        <Navbar />
       </div>
     </section>
   );
